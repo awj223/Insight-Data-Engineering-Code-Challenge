@@ -7,9 +7,9 @@ Author's notes:
 - timestamp_ms tag has been used to get the time of each tweet, as opposed to using the created_at tag. I emailed cc@insightdataengineering.com and was told that this was okay.
 
 - The arguments to the parse_tweets.py script are as follows (in case you wish to run it outside of the run.sh script):
-    -i <input file> (the file containing the JSON Twitter feed)
-    -f <output file for first feature>
-    -s <output file for second feature>
+    * -i input file
+    * -f output file for first feature
+    * -s output file for second feature
 
 - I have obviously attempted to write this so that it does not consume unnecessary memory (load in the entire batch of tweets and process them from memory), as data streams can be very large. Instead, the program reads in the tweets line by line and maintains only the necessary state at each step to write the next line to its output files.
 
